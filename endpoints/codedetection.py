@@ -21,24 +21,42 @@ main_config, logger = initialize(
 
 @router.post('/')
 async def main():    
-    config = main_config.get('table_similarity_search')
     # Sample note which will be changed later
-    current_time = 1722265922
-    list_of_notes = [['Dysphagia following unspecified cerebral vascular disease I69.991 - Contributing Factors for I69.991 - Dementia -', current_time, current_time, True],['Depression -', current_time, current_time, True],['Tooth Decay', current_time, current_time, True]]
-    list_of_notes =  pd.DataFrame(list_of_notes, columns=['text','PID','RID','is_query'])
-    list_of_notes.to_parquet('./temp/notes.parquet')
+    try:
+        current_time = 1722265922
+        list_of_notes = [['1Dysphagia following unspecified cerebral vascular disease I69.991 - Contributing Factors for I69.991 - Dementia -', current_time, current_time, True],['Depression -', current_time, current_time, True],['Tooth Decay', current_time, current_time, True]]
+        list_of_notes =  pd.DataFrame(list_of_notes, columns=['text','PID','RID','is_query'])
+        list_of_notes.to_parquet('./temp/notes.parquet')
+        logger.info(f'Reading notes completed for id {current_time}')
+    except Exception as e:
+        logger.error(e)
 
     # Run Embedding Generator
-    embedding_generator()
-    time.sleep(0.001)
+    try:
+        embedding_generator()
+        time.sleep(0.001)
+        logger.info(f'Embedding is done')
+    except Exception as e:
+        logger.error(e)
+
 
     # Make pgvector
-    pgvector_populator()
-    time.sleep(0.001)
+    try:
+        pgvector_populator()
+        time.sleep(0.001)
+        logger.info(f'Adding to database is done')
+    except Exception as e:
+        logger.error(e)
+
 
     # Get most similarity
-    table_similarity_search(current_time)
-    time.sleep(0.001)
+    try:
+        table_similarity_search(current_time)
+        time.sleep(0.001)
+        logger.info(f'Similarity checking is done')
+    except Exception as e:
+        logger.error(e)
+
 
     # Connect to pgvector connection
     query = f"SELECT * FROM note_icd_similarity WHERE rid = %s"
