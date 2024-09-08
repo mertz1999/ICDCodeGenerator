@@ -3,3 +3,4 @@ logs
 src/__pycache__
 endpoints/__pycache__
 .env
+temp

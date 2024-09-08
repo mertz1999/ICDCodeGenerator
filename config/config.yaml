@@ -1,0 +1,168 @@
+
+pgvector_connection:
+  database: icd10_v0
+  user: postgres
+  password: apps_admin_visible_pass
+  host: postgres
+  port: 5432
+
+check_connectivity:
+  db_connection_templae: |
+    DRIVER=ODBC Driver 18 for SQL Server;
+    SERVER={DB_SERVER};
+    DATABASE=PIEMRDB;
+    UID={DB_USERNAME};
+    PWD={DB_PASSWORD};
+    TrustServerCertificate=yes;
+    Encrypt=yes;  
+
+file_list_generator:
+ root_folder: /home/agent/workspace/isights/datasets/insurance
+ output_path: /home/agent/workspace/isights/datasets/insurance/handbooks.csv
+
+pdf_batch_reader_1:
+ input_path: /home/agent/workspace/isights/datasets/insurance/deltadental_handbooks.csv
+ output_path: /home/agent/workspace/isights/datasets/insurance/deltadental_handbooks_chunked.parquet
+
+curate_jsonl:
+ input_path: /home/agent/workspace/guideline2actions/datasets/patient_insurance_submission_form.jsonl
+ output_path: /home/agent/workspace/guideline2actions/datasets/patient_insurance_submission_form.parquet
+ rename_columns:
+    Th: Tooth
+    Surf: Surface
+    Dx: Diagnosis
+
+
+# python /home/agent/workspace/MediNoteAI/src/medinote/embedding/embedding_generator.py
+############### infinity ###################
+# embedding_generator:
+#   type: 'infinity'
+#   input_path: /home/agent/workspace/CodeGenerator/dataset/database_notes_v1.parquet
+#   output_path: /home/agent/workspace/CodeGenerator/temp/database_notes_v1_embed.parquet
+#   column2embed: text
+#   failure_condition: embedding.isnull()
+#   # instruct: retrieve most relevant clinical code description for the input query that will be used to pass it to insurance. focuse more on the last part of each query which is the last child in the hierarchy
+#   instruct: retrieve most relevant clinical code description for the input query that will be used to pass it to insurance. check the meaning by synonyms.
+#   inference_url: http://20.125.221.53:8888/embeddings
+#   response_column: embedding
+
+#   prompt_template: |
+#     {embedding_input}
+
+#   payload_template: |
+#     {{
+#       "model": "models/stella_en_400M_v5",
+#       "input": "{prompt}"
+#     }}
+
+############### text-embedding-inference ###################
+embedding_generator:
+  type: 'text-embedding-inference'
+  input_path: /home/agent/workspace/ICDCodeGenerator/temp/notes.parquet
+  output_path: /home/agent/workspace/ICDCodeGenerator/temp/notes_embed.parquet
+  column2embed: text
+  failure_condition: embedding.isnull()
+  instruct: "Given a clinical note by doctor, extract the most relevant history of notes that has the same meaning even for a short part of the notes do not forgot to check the pos/neg meaning of the sentences. words like 'unspecified tell you that the details in not mentioned so if the qury dont have any details they are in same meaning."
+  inference_url: http://4.152.203.183:8888/embed
+  response_column: embedding
+  
+  examples:
+    - query: "Diagnoses: - Diabetes type one"
+      response: "Type one of Diabetes (A chronic condition where the pancreas produces little or no insulin, necessitating lifelong insulin therapy to regulate blood glucose levels)."
+    - query: "Diabetes"
+      response: "The patient dont have ant DEHYDRATION"
+    - query: "Diabetes unspecified Type"
+      response: "without DEHYDRATION."
+
+  prompt_template: |
+    {embedding_input}
+
+  payload_template: |
+    {{
+      "inputs": "{prompt}"
+    }}
+
+
+# python /home/agent/workspace/MediNoteAI/src/medinote/embedding/pgvector_populator.py 
+pgvector_populator:
+  input_path: /home/agent/workspace/ICDCodeGenerator/temp/notes_embed.parquet
+  output_path: /home/agent/workspace/ICDCodeGenerator/temp/notes_embed_pg.parquet
+  apply_function_to_chunk: True
+  recreate: true
+  pgvector_table_name: request_notes
+  embedding_column: embedding
+  vector_dimension: 4096
+  include_row_keys: 
+    - text
+    - PID
+    - RID
+    - prompt
+    - status_code
+
+matching_criteria:
+  output_path: /home/agent/workspace/guideline2actions/datasets/insurance/deltadental/deltadental_matched.parquet
+  query: Find top dental procedures on the patient
+  pgvector_table_name: patient_insurance_submission_form 
+  include_row_keys: 
+    - date
+    - tooth
+    - surface
+    - diagnosis
+    - description
+    - stat
+    - prov
+    - amount
+    - proc_code
+    - username
+    - signed
+    - embedding_input
+    - prompt
+    - status_code
+
+
+
+  inference_url: http://embed-generative-ai:8000/embeddings
+  response_column: embedding
+
+  prompt_template: |
+    {embedding_input}
+
+  payload_template: |
+    {{
+      "model": "models/stella_en_400M_v5",
+      "input": "{prompt}"
+    }}
+
+  second_critera:
+    query_template: find if {description} is covered by insurance
+    pgvector_table_name: handbooks
+    include_row_keys: 
+      - text
+      - file_path
+      - file_name
+    include_parent_keys:
+    - description
+    - tooth
+    - surface
+    - diagnosis
+    - amount
+    - proc_code
+    inference_url: http://embed-generative-ai:8000/embeddings
+    response_column: embedding
+
+    prompt_template: |
+      {embedding_input}
+
+    payload_template: |
+      {{
+        "model": "models/stella_en_400M_v5",
+        "input": "{prompt}"
+      }}
+
+# python /home/agent/workspace/MediNoteAI/src/medinote/embedding/table_similarity_search.py
+table_similarity_search:
+  recreate: True
+  create_table: '/home/agent/workspace/ICDCodeGenerator/sqls/result_table.sql'
+  search: '/home/agent/workspace/ICDCodeGenerator/sqls/search.sql'
+  save_result: '/home/agent/workspace/ICDCodeGenerator/sqls/make_result.sql'
+  rid: 0
