@@ -12,7 +12,7 @@ WITH ranked_matches AS (
         icd10_v0_table icd,
         request_notes notes
     WHERE
-        notes.PID 123145648787987987987
+        notes.PID = %s
 )
 SELECT
     notes_id,

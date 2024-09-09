@@ -23,13 +23,15 @@ main_config, logger = initialize(
 async def main():    
     # Sample note which will be changed later
     try:
-        current_time = 1722265922
-        list_of_notes = [['1Dysphagia following unspecified cerebral vascular disease I69.991 - Contributing Factors for I69.991 - Dementia -', current_time, current_time, True],['Depression -', current_time, current_time, True],['Tooth Decay', current_time, current_time, True]]
+        current_time = 4654654654
+        # list_of_notes = [['1Dysphagia following unspecified cerebral vascular disease I69.991 - Contributing Factors for I69.991 - Dementia -', current_time, current_time, True],['Depression -', current_time, current_time, True],['Tooth Decay', current_time, current_time, True]]
+        list_of_notes = [['Tooth Decay', current_time, current_time, True]]
         list_of_notes =  pd.DataFrame(list_of_notes, columns=['text','PID','RID','is_query'])
         list_of_notes.to_parquet('./temp/notes.parquet')
         logger.info(f'Reading notes completed for id {current_time}')
     except Exception as e:
         logger.error(e)
+        return {'error':'problem in json parsing'}
 
     # Run Embedding Generator
     try:
@@ -38,15 +40,17 @@ async def main():
         logger.info(f'Embedding is done')
     except Exception as e:
         logger.error(e)
+        return {'error':'problem in Embedding'}
 
 
     # Make pgvector
-    try:
+    try: 
         pgvector_populator()
         time.sleep(0.001)
         logger.info(f'Adding to database is done')
     except Exception as e:
         logger.error(e)
+        return {'error':'problem in Adding to database'}
 
 
     # Get most similarity
@@ -56,22 +60,31 @@ async def main():
         logger.info(f'Similarity checking is done')
     except Exception as e:
         logger.error(e)
+        return {'error': 'similarity search problem'}
 
 
-    # Connect to pgvector connection
-    query = f"SELECT * FROM note_icd_similarity WHERE rid = %s"
-    rows, table_desc = execute_query(query, (str(current_time),), True)
+    # Exract the codes from database
+    try:
+        query = f"SELECT * FROM note_icd_similarity WHERE rid = %s"
+        rows, table_desc = execute_query(query, (str(current_time),), True)
 
-    colnames = [desc[0] for desc in table_desc]
-    df = pd.DataFrame(rows, columns=colnames)
+        colnames = [desc[0] for desc in table_desc]
+        df = pd.DataFrame(rows, columns=colnames)
 
-    # Group by the specified column
-    grouped_df = df.groupby('note_id')
-    for g in grouped_df:
-        code = g[1].iloc[0]['icd_code']
-        note = g[1].iloc[0]['note_text']
-        print(code, note)
+        # Group by the specified column
+        grouped_df = df.groupby('note_id')
+        codes = []
+        for g in grouped_df:
+            code = g[1].iloc[0]['icd_code']
+            note = g[1].iloc[0]['note_text']
+            print(code, note)
+            codes.append(code)
+
+    except Exception as e:
+        codes = []
+        logger.error(e)
+        return {'error':'failed to fetch most similar ICD codes'}
+
     # print(grouped_df)
     remove('./temp')
-
-    return {"error": None, "PID" :current_time, "RID":current_time}
+    return {"error": None, "PID" :current_time, "RID":current_time, "codes":codes}
