@@ -165,4 +165,3 @@ table_similarity_search:
   create_table: '/home/agent/workspace/ICDCodeGenerator/sqls/result_table.sql'
   search: '/home/agent/workspace/ICDCodeGenerator/sqls/search.sql'
   save_result: '/home/agent/workspace/ICDCodeGenerator/sqls/make_result.sql'
-  rid: 0

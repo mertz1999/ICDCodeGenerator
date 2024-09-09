@@ -1,0 +1,238 @@
+code,text
+A41.9,SEPSIS UNSPECIFIED ORGANISM
+C32.9,MALIGNANT NEOPLASM OF LARYNX  UNSPECIFIED
+C34.90,MALIGNANT NEOPLASM OF UNSP PART OF UNSP BRONCHUS OR LUNG
+C41.1,MALIGNANT NEOPLASM OF MANDIBLE
+C71.9,MALIGNANT NEOPLASM OF BRAIN  UNSPECIFIED
+D49.6,NEOPLASM OF UNSPECIFIED BEHAVIOR OF BRAIN
+D64.9,ANEMIA  UNSPECIFIED
+E46,UNSPECIFIED PROTEIN-CALORIE MALNUTRITION
+E86.0,DEHYDRATION
+F01.50,VASCULAR DEMENTIA  UNSP SEVERITY without behavioral disturbances
+F01.518,VASCULAR DEMENTIA  UNSP SEVERIT with other behavioral disturbances
+F02.818,DEM IN OTH DIS CLASSD ELSWHR  UNSP SEV  WITH OTH BEH DISTRB
+F03.90,UNSPECIFIED DEMENTIA WITHOUT BEHAVIORAL DISTURBANCE
+F03.918,UNSP DEMENTIA  UNSP SEVERITY  WITH OTHER BEHAVIORAL DISTURB : Anxiety - Psychosis - Schizophrenia  - Difficulty sleeping
+F05,DELIRIUM DUE TO KNOWN PHYSIOLOGICAL CONDITION
+F20.9,SCHIZOPHRENIA  UNSPECIFIED
+F41.9,ANXIETY DISORDER  UNSPECIFIED
+F48.2,PSEUDOBULBAR AFFECT
+F71,MODERATE INTELLECTUAL DISABILITIES
+F72,SEVERE INTELLECTUAL DISABILITIES
+F73,PROFOUND INTELLECTUAL DISABILITIES
+F79,UNSPECIFIED INTELLECTUAL DISABILITIES - Mental Retardation/IDD
+F80.9,DEVELOPMENTAL DISORDER OF SPEECH AND LANGUAGE  UNSPECIFIED
+F84.0,AUTISTIC DISORDER
+F84.2,RETT'S SYNDROME
+F84.8,OTHER PERVASIVE DEVELOPMENTAL DISORDERS
+F95.2,TOURETTE'S DISORDER
+G10,HUNTINGTON'S DISEASE
+G20.C,PARKINSONISM  UNSPECIFIED
+G21.9,SECONDARY PARKINSONISM  UNSPECIFIED
+G24.01,DRUG INDUCED SUBACUTE DYSKINESIA
+G25.0,ESSENTIAL TREMOR
+G30.9,ALZHEIMER'S DISEASE  UNSPECIFIED - Alzheimers Dementia
+G35,MULTIPLE SCLEROSIS
+G40.89,OTHER SEIZURES - Seizure Disorder: controlled - Seizure Disorder: uncontrolled 
+G40.909,EPILEPSY  UNSP  NOT INTRACTABLE  WITHOUT STATUS EPILEPTICUS
+G45.9,TRANSIENT CEREBRAL ISCHEMIC ATTACK  UNSPECIFIED - TIA
+G70.01,Myasthenia gravis with acute exacerbation
+G71.00,MUSCULAR DYSTROPHY  UNSPECIFIED
+G80.3,ATHETOID CEREBRAL PALSY - Athetoid
+G80.9,CEREBRAL PALSY  UNSPECIFIED -  Congenital  -  Athetoid -  Psuedobulbar
+G82.50,QUADRIPLEGIA  UNSPECIFIED - Quadriplegia  - C1-C4 -  C5-C7 
+G83.84,TODD'S PARALYSIS (POSTEPILEPTIC)
+G90.09,OTHER IDIOPATHIC PERIPHERAL AUTONOMIC NEUROPATHY
+G90.3,MULTI-SYSTEM DEGENERATION OF THE AUTONOMIC NERVOUS SYSTEM
+G91.2,(IDIOPATHIC) NORMAL PRESSURE HYDROCEPHALUS
+G93.1,ANOXIC BRAIN DAMAGE  NOT ELSEWHERE CLASSIFIED
+G93.40,ENCEPHALOPATHY  UNSPECIFIED
+G93.41,METABOLIC ENCEPHALOPATHY
+I10,ESSENTIAL (PRIMARY) HYPERTENSION (HTN)
+I11.0,HYPERTENSIVE HEART DISEASE WITH HEART FAILURE
+I11.9,HYPERTENSIVE HEART DISEASE WITHOUT HEART FAILURE
+I25.10,ATHSCL HEART DISEASE OF NATIVE CORONARY ARTERY W/O ANG PCTRS - CAD - Atherosclerosis
+I48.91,UNSPECIFIED ATRIAL FIBRILLATION
+I50.20,UNSPECIFIED SYSTOLIC (CONGESTIVE) HEART FAILURE
+I50.21,ACUTE SYSTOLIC (CONGESTIVE) HEART FAILURE
+I50.22,Chronic systolic (congestive)heart failure
+I50.23,ACUTE ON CHRONIC SYSTOLIC (CONGESTIVE) HEART FAILURE
+I50.30,UNSPECIFIED DIASTOLIC (CONGESTIVE) HEART FAILURE
+I50.31,ACUTE DIASTOLIC (CONGESTIVE) HEART FAILURE
+I50.32, Chronic diastolic (congestive)heart failure
+I50.33,Acute on chronic diastolic (congestive) heart failure
+I50.40,Unspecified systolic and diastolic (congestive) heart failure
+I50.41,ACUTE COMBINED SYSTOLIC AND DIASTOLIC (CONGESTIVE) HRT FAIL - Acute systolic and diastolic (congestive) heart failure
+I50.42,Chronic systolic and diastolic (congestive)heart failure
+I50.43,Acute on chronic systolic and diastolic (congestive) heart failure
+I50.84,END STAGE HEART FAILURE
+I62.00,NONTRAUMATIC SUBDURAL HEMORRHAGE  UNSPECIFIED
+I62.9,NONTRAUMATIC INTRACRANIAL HEMORRHAGE  UNSPECIFIED
+I63.30, Cerebral Infarction due to thrombosis of unspecified cerebral artery
+I63.40, Cerebral infarction due to embolism of unspecified cerebral artery
+I63.49,CEREBRAL INFARCTION DUE TO EMBOLISM OF OTHER CEREBRAL ARTERY
+I63.50,Cerebral infarction due to unspecified occlusion or stenosis of unspecified cerebellar artery - Cerebral infarction due to unspecified occlusion or stenosis of other cerebral artery
+I63.512,CEREB INFRC D/T UNSP OCCLS OR STENOS OF LEFT MID CEREB ART
+I63.9,CEREBRAL INFARCTION  UNSPECIFIED - Other cerebral infarction 
+I69.091,Dysphagia following nontraumatic subarachnoid hemorrhage 
+I69.151,Hemiplegia and hemiparesis following nontraumatic intracerebral hemorrhage affecting right dominant side
+I69.191,DYSPHAGIA FOLLOWING NONTRAUMATIC INTRACEREBRAL HEMORRHAGE
+I69.220,Aphasia following other nontraumatic intracranial hemorrhage 
+I69.222,Dysarthria following other nontraumatic intracranial hemorrhage
+I69.291,Dysphagia following other nontraumatic intracranial hemorrhage
+I69.320,Aphasia following cerebral infarction 
+I69.322,DYSARTHRIA FOLLOWING CEREBRAL INFARCTION
+I69.351,Hemiplegia and hemiparesis following cerebral infarction affecting right dominant side
+I69.352, Hemiplegia and hemiparesis following cerebral infarction affecting left dominant side
+I69.353,Hemiplegia and hemiparesis following cerebral infarction affecting right non-dominant side
+I69.354,Hemiplegia and hemiparesis following cerebral infarction affecting left non-dominant side
+I69.391,Dysphagia following cerebral infarction
+I69.820,Aphasia following other cerebrovascular disease 
+I69.821,Dysphasia following other cerebrovascular disease 
+I69.822,DYSARTHRIA FOLLOWING OTHER CEREBROVASCULAR DISEASE
+I69.891,Dysphagia following other cerebral vascular disease
+I69.991,Dysphagia following unspecified cerebral vascular disease
+J18.9,PNEUMONIA  UNSPECIFIED ORGANISM
+J38.3,OTHER DISEASES OF VOCAL CORDS - Incomplete - Uneven vocal fold height
+J39.2,OTHER DISEASES OF PHARYNX - Cricopharyngeal dysfunction - Cricopharyngeal bar - Cricopharyngeal bar with retropulsion into larynx - Cricopharyngeal bar with retropulsion into pharynx - Cricopharyngeal bar with good clearance into esophagus
+J43.9,EMPHYSEMA  UNSPECIFIED
+J44.1,CHRONIC OBSTRUCTIVE PULMONARY DISEASE with acute exacerbation
+J44.9,CHRONIC OBSTRUCTIVE PULMONARY DISEASE  UNSPECIFIED - COPD 
+J45.909,UNSPECIFIED ASTHMA  UNCOMPLICATED
+J69.0,PNEUMONITIS DUE TO INHALATION OF FOOD AND VOMIT - Aspiration Pneumonia
+J96.00,Respiratory Failure with hypoxia or hypercapnia
+J96.90,RESPIRATORY FAILURE  UNSP  UNSP W HYPOXIA OR HYPERCAPNIA
+J96.91,Respiratory Failure with hypoxia
+K08.409,PARTIAL LOSS OF TEETH  UNSPECIFIED CAUSE  UNSPECIFIED CLASS - Missing one or more teeth - Missing one or more teeth with partials - uppers and/or lowers
+K14.8,OTHER DISEASES OF TONGUE - Reduced lingual strength - Reduced lingual ROM - Decreased tongue base retraction - decreased BOT retraction
+K21.9,GASTRO-ESOPHAGEAL REFLUX DISEASE WITHOUT ESOPHAGITIS -  GERD/Gastroesophageal Reflux Disease - Reflux - Reflux of dye into pharyngeal space with significant risk of aspiration - Reflux of dye into pharyngeal space with aspiration - Nexium - Omeprazole - Pepcid - Prevacid - Prilosec - Protonix - Zantac 
+K22.0,ACHALASIA OF CARDIA
+K22.2,ESOPHAGEAL OBSTRUCTION - Esophageal Stricture
+K22.4,DYSKINESIA OF ESOPHAGUS - Abnormal spasm of upper 1/3 - Abnormal spasm of lower 2/3 - Dysmotility - Tortuous esophagus - Esophageal Dysmotility
+K22.5,DIVERTICULUM OF ESOPHAGUS  ACQUIRED - Zenker's diverticulum with retropulsion - Zenker's diverticulum without retropulsion into larynx - Zenker's diverticulum without retropulsion into larynx
+M06.9,RHEUMATOID ARTHRITIS  UNSPECIFIED
+M13.80,OTHER SPECIFIED ARTHRITIS  UNSPECIFIED SITE
+M19.90,UNSPECIFIED OSTEOARTHRITIS  UNSPECIFIED SITE
+M25.78,OSTEOPHYTE  VERTEBRAE - Anterior Osteophytes at
+M26.52,LIMITED MANDIBULAR RANGE OF MOTION - Reduced ROM - Asymmetry - Drooling - Impairment of bolus manipulation - Pocketing - Previous surgery - Reduced lingual coordination - Reduced lingual ROM - Reduced lingual strength - Reduced mastication - Reduced rotary jaw action - Malocclusion due to TMJ Arthrosis - Decreased/limited ROM and strength  - Affects oral bolus transit 
+M27.8,OTHER SPECIFIED DISEASES OF JAWS - Bone loss of mandibular body - Healed Fx - Osteoporosis - Surgical hardware
+M40.202,UNSPECIFIED KYPHOSIS  CERVICAL REGION
+M41.9,SCOLIOSIS  UNSPECIFIED
+M43.22,FUSION OF SPINE  CERVICAL REGION - Surgical hardware
+M47.892,OTHER SPONDYLOSIS  CERVICAL REGION - Degenerative changes of the lower C-spine
+M48.02,SPINAL STENOSIS  CERVICAL REGION - Disc narrowing at
+M48.12,ANKYLOSING HYPEROSTOSIS [FORESTIER]  CERVICAL REGION - D.I.S.H. (diffuse idiopathic skeletal hyperostosis)
+M50.00,CERVICAL DISC DISORDER WITH MYELOPATHY  UNSP CERVICAL REGION
+M50.30,OTHER CERVICAL DISC DEGENERATION  UNSP CERVICAL REGION - Multi-level degenerative disc disease
+M62.82,RHABDOMYOLYSIS
+M81.0,AGE-RELATED OSTEOPOROSIS W/O CURRENT PATHOLOGICAL FRACTURE
+N39.0,URINARY TRACT INFECTION  SITE NOT SPECIFIED - UTI
+Q39.1,ATRESIA OF ESOPHAGUS WITH TRACHEO-ESOPHAGEAL FISTULA
+Q39.4,ESOPHAGEAL WEB
+Q90.9,DOWN SYNDROME  UNSPECIFIED - Down's syndrome
+R09.89,OTH SYMPTOMS AND SIGNS INVOLVING THE CIRC AND RESP SYSTEMS - food/pills getting stuck
+R13.11,DYSPHAGIA  ORAL PHASE - Oral Dysphagia 
+R13.12,DYSPHAGIA  OROPHARYNGEAL PHASE - Oropharyngeal Dysphagia
+R13.13,DYSPHAGIA  PHARYNGEAL PHASE - Pharyngeal Dysphagia
+R13.14,DYSPHAGIA  PHARYNGOESOPHAGEAL PHASE - Pharyngoesophageal Dysphagi
+R13.19,OTHER DYSPHAGIA - Esophageal Dysphagia
+R47.01,APHASIA
+R56.9,UNSPECIFIED CONVULSIONS
+R62.59,OTH LACK OF EXPECTED NORMAL PHYSIOL DEVELOPMENT IN CHILDHOOD
+R62.7,ADULT FAILURE TO THRIVE
+R63.30,FEEDING DIFFICULTIES  UNSPECIFIED
+R63.4,ABNORMAL WEIGHT LOSS
+S06.5X0A,TRAUM SUBDR HEM W/O LOSS OF CONSCIOUSNESS  INIT - without loss of consciousness
+S06.5X9A,TRAUM SUBDR HEM W LOC OF UNSP DURATION  INIT - ICH  Traumatic Subdural Hemorrhage with loss of consciousness - with loss of consciousness
+T17.400A,UNSP FOREIGN BODY IN TRACHEA CAUSING ASPHYXIATION  INIT - Aspirate visualized laterally and on A/P view in Proximal Trachea  - Aspirate visualized laterally and on A/P view in Distal Trachea - Aspirate visualized laterally and on A/P view in Carina
+T17.500A,UNSP FOREIGN BODY IN BRONCHUS CAUSING ASPHYXIATION  INIT - Aspirate visualized laterally and on A/P view in Left and right Mainstem Bronchus 
+U07.1,COVID-19
+Z85.01,PERSONAL HISTORY OF MALIGNANT NEOPLASM OF ESOPHAGUS - Esophageal cancer
+Z85.118,PERSONAL HISTORY OF MALIGNANT NEOPLASM OF BRONCHUS AND LUNG
+Z85.818,PRSNL HX OF MALIG NEOPLM OF SITE OF LIP  ORAL CAV  & PHARYNX - Head and Neck Cancer
+Z86.16,PERSONAL HISTORY OF COVID-19 - COVID 19
+Z86.73,PRSNL HX OF TIA (TIA)  AND CEREB INFRC W/O RESID DEFICITS
+Z87.820,PERSONAL HISTORY OF TRAUMATIC BRAIN INJURY - History of TBI
+Z87.891,PERSONAL HISTORY OF NICOTINE DEPENDENCE - In the past
+Z92.3,PERSONAL HISTORY OF IRRADIATION - Radiation therapy 
+Z93.0,TRACHEOSTOMY STATUS - yes - Tracheostomy
+Z93.1,GASTROSTOMY STATUS - PEG
+Z97.8,PRESENCE OF OTHER SPECIFIED DEVICES - Pacemaker
+Z99.81,DEPENDENCE ON SUPPLEMENTAL OXYGEN - yes
+E78.5,Hyperlipidemia
+T17.920A,Foreign body in the pharynx - Reside in Pharynx
+I73.9,Peripheral vascular disease
+K08.109,Complete loss of teeth due to trauma
+N18.9,Chronic kidney disease
+S13.150A,Sprain of the cervical spine
+R63.32,Reduced appetite
+G81.04,Hemiplegia
+I65.29,Occlusion and stenosis of other arteries of the neck
+H53.16,Visual snow
+E66.9,Obesity
+Q98.4,Down syndrome with other heart defect
+F25.9,Schizoaffective disorder
+I25.2,Old myocardial infarction
+Z97.2,Presence of artificial eye
+F10.10,Alcohol abuse
+K50.90,Crohn's disease
+R65.21,Severe sepsis with septic shock
+D33.0,Benign neoplasm of the brain
+G89.4,Chronic pain syndrome
+G47.30,Sleep apnea
+R27.0,Ataxia
+S06.5X9D,Traumatic brain injury with other specified sequelae
+Z93.3,Tracheostomy status
+F17.200,Nicotine dependence
+N18.6,End-stage renal disease
+I26.99,Other pulmonary embolism
+K44.9,Diaphragmatic hernia
+I65.23,Occlusion and stenosis of left carotid artery
+C06.9,Malignant neoplasm of the oral cavity
+C31.0,Malignant neoplasm of the nasal cavity
+F32.A,Major depressive disorder
+s06.5x9a,Traumatic brain injury with other specified sequelae
+J95.04,Acute respiratory failure due to tracheostomy
+C88.4,Other malignant immunoproliferative diseases
+C76.0,Malignant neoplasm of the overlapping lesion of the skin
+E78.2,Hyperlipidemia
+N17.9,Acute kidney failure
+S12.100D,Fracture of the cervical vertebra
+Q87.19,Other congenital malformation syndromes affecting multiple systems
+Q87.2,Other congenital malformation syndromes
+I59.392,Other sequelae of stroke
+F31.9,Bipolar disorder
+R11.2,Nausea with vomiting
+J84.10,Pulmonary fibrosis
+G49.A2,Restless legs syndrome
+C79.31,Secondary malignant neoplasm of bone
+C7A.1,Malignant neoplasm of the thymus
+E11.22,Type 2 diabetes mellitus with diabetic kidney disease
+F90.9,Attention-deficit hyperactivity disorder
+K85.92,Acute pancreatitis due to other specified drugs
+C25.9,Malignant neoplasm of the pancreas
+M79.7,Fibromyalgia
+G10.94,Huntington's disease with chorea
+G60.9,Hereditary neuropathy
+i63.512,Infarction of left cerebellum
+C02.9,Malignant neoplasm of the lip
+I69.154,Hemiplegia and hemiparesis following cerebral infarction
+Z59.00,Homelessness
+U09.9,Post-COVID-19 condition
+S12.101S,Fracture of cervical vertebra
+Z46.59,Encounter for fitting and adjustment of other prosthetic device
+C78.5,Secondary malignant neoplasm of lung
+C85.90,Non-Hodgkin lymphoma
+B20,Human immunodeficiency virus (HIV) disease
+j96.11,Acute respiratory failure with hypoxia
+M72.6,Fibrous dysplasia of bone
+I67.82,Moyamoya disease
+I69.892,Sequelae of cerebrovascular accident with other specified sequelae
+Q87.11,Other congenital malformation syndromes affecting the head
+K56.690,Other specified bowel obstruction
+M47.9,Spondylosis
+I87.2,Venous insufficiency (chronic) (peripheral)
+Q87.43,Other congenital malformation syndromes affecting the trunk
+K70.9,Alcoholic liver disease
+G83.12,Hemiplegia due to stroke
+g47.35,Obstructive sleep apnea (adult)

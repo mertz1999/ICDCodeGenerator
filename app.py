@@ -1,6 +1,7 @@
 # main.py
 from fastapi import FastAPI
 from endpoints.codedetection import router as codedetection_
+from endpoints.sortdxcode import router as sorting_
 import uvicorn
 import argparse
 
@@ -8,6 +9,7 @@ app = FastAPI()
 
 # Include the routers from the endpoints
 app.include_router(codedetection_, prefix="/api/v1/detection")
+app.include_router(sorting_, prefix="/api/v1/sorting")
 
 @app.get("/")
 def read_root():

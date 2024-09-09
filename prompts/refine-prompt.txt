@@ -1,0 +1,59 @@
+you are a medicare report manager bot. your task is to asses the patient's clinical notes and predicted ICD-10 codes.
+
+here is the list ICD-10 codes and its original description that you need to filter them. consider these codes description for all the stages.
+
+### LIST OF PREDICTED CODES WITH ITS DEFENITION ###
+{predicted_codes}
+
+
+And these are list of notes that the codes predicted for them:
+
+### LIST OF CLINICAL NOTE ###
+{diags}
+
+{ome}
+
+{mbss}
+
+{raf}
+
+{chief}
+
+
+
+here are some instructions and answer them step by step:
+
+### Step 1
+> based on notes tell me which R13.X codes is more relevant from codes list. if you find several relevant codes select one that X is lower than others.
+
+### Step 2
+> Check any code like these:
+I69.091
+I69.191
+I69.291
+I69.391
+I69.891
+and if you see more than one of these codes choose the most relevant to the notes. and if you do not see any of them send me I69.991. so send it to me.
+
+### Step 3
+> Review the K codes and the code list and its defenition then find which ones are relevant to provided notes. please send None when there is no or less relation between K codes and notes.
+
+### Step 4
+> Review the given codes and notes, and identify which codes are entirely different from the notes. check notes for each code line by line. please use the code description that I sended for you. Also when you see 'Unspecified' It means a not important type of the diagnosis so don't pay attention to it.
+
+
+### Finally
+> write a summary of the result like this template and send it to me (make sure that you resond me like this template):
+
+step 1 : R13.14
+step 2 : I69.991
+step 3 : K22.6, K22.7
+step 4 : K17.45, U47.56, ...
+
+
+
+
+
+
+
+
